@@ -7,6 +7,30 @@
 body {
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
+
+@media (max-width: 824px) {
+  body {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+      font-size: 16px;
+      padding: 20px;
+  }
+
+  .container {
+      width: 90%;
+      margin: auto;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -277,7 +301,7 @@ h4 {
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: white; /* Increased contrast */
   max-width: 600px;
@@ -368,14 +392,14 @@ h4 {
   margin: 60px auto;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 20px;
+  gap: 35px;
   column-gap: 50px;
 }
 
 /* Skill Item */
 .skill span {
   color: white;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -417,8 +441,6 @@ h4 {
   text-align: left;
   max-width: 1400px;
   margin: 0 auto;
-  margin-left: 150px;
-  margin-top: -70px;
 }
 
 /* Line Above Subheading */
@@ -428,7 +450,6 @@ h4 {
   background-color: white; /* Color of the line */
   border: none;
   margin-bottom: 20px; /* Spacing between line and text */
-  margin-left: 150px;
 }
 
 /* Subheading */
@@ -437,7 +458,6 @@ h4 {
   font-size: 17px;
   width: 50%;
   margin-bottom: 10px;
-  margin-left: 150px;
 }
 
 /* Heading */
@@ -445,7 +465,6 @@ h4 {
   font-size: 40px;
   font-weight: bold;
   color: white;
-  margin-left: 150px;
 }
 
 /* Grid for Projects */
@@ -454,20 +473,21 @@ h4 {
   gap: 40px;
   margin-top: 40px;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  margin-left: 150px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Project Boxes */
 .project-box {
   width: 800px;
-  height: 300px;
+  height: 350px;
   background: linear-gradient(145deg, #0d0818, #6e555d);
   flex-direction: column;
   border-radius: 10px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-size: 20px;
   font-weight: bold;
@@ -476,27 +496,31 @@ h4 {
   padding-top: 40px;
   text-align: center;
   cursor: pointer;
+  text-align: center;
 }
 
-h3 {
-  font-size: 1.7rem;
+.project-box h3 {
+  font-size: 2.0rem;
   font-weight: bold;
-  margin-bottom: 20px;
   text-align: center;
   white-space: nowrap; /* Prevents title from breaking into two lines */
   overflow: visible; /* Ensures no unwanted overflow */
-  text-overflow: clip; /* Adds '...' if the text is too long */
   margin: 0;
   white-space: nowrap;
-  margin-left: 70px;
+  left: 50%;
+  transform: translateX(-50%); /* Centers it horizontally */
+  position: absolute;
+  top: 50px;
+  color: #f9004d;
 }
 
 .project-description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 90%;
   text-align: center;
   line-height: 1.5;
-  padding-bottom: 20px;
+  position: absolute;
+  color: white;
 }
 
 /* Hover Effect */
