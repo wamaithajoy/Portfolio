@@ -658,6 +658,7 @@ h4 {
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 }
 
 .github-link::after {
@@ -677,7 +678,6 @@ h4 {
 }
 
 .github-link:hover::after {
-  content: " → https://github.com/wamaithajoy"; /* Shows link on hover */
   color: #f9004d;
   font-weight: normal;
   margin-left: 5px;
