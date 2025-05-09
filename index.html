@@ -26,7 +26,12 @@
 			<div class="logo">
 				<span class="fancy-w">W</span><span class="heart">♡</span>maitha
 			</div>
-			<ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+			<ul class="nav-menu">
 				<li><a href="#home" class="active">Home</a></li>
 				<li><a href="#about">About Me</a></li>
 				<li><a href="#skills">Skills</a></li>
@@ -43,7 +48,7 @@
 			<h1 class="name">Joy Wamaitha</h1>
 			<h3 class="subheading">Backend Engineer || Data Scientist</h3>
 			<div class="scroll-down" onclick="scrollToSection()">
-				<hr class="scroll-line"> <!-- Horizontal Line -->
+				<hr class="scroll-line"> 
 				<span>Scroll Down</span>
 			</div>
 		</div>	
@@ -53,12 +58,10 @@
     <div class="container">
         <h2 class="section-title"><span>Discover</span> About Me</h2>
         <div class="about-content">
-            <!-- Profile Image -->
             <div class="about-image">
                 <img src="mee (1).jpg" alt="Joy Wamaitha">
             </div>
             
-            <!-- About Info -->
             <div class="about-text">
                 <p>
                     
@@ -67,7 +70,6 @@ I thrive in spaces where I can learn, break things (responsibly, of course), and
 
                 </p>
                 
-                <!-- Info Box -->
                 <div class="about-info">
                     <div class="info-column">
                         <p><strong>Name:</strong> Joy Wamaitha</p>
@@ -82,7 +84,6 @@ I thrive in spaces where I can learn, break things (responsibly, of course), and
                     </div>
                 </div>
 
-                <!-- Download CV Button -->
                 <a href="Joy-Wamaitha Resume.pdf" class="download-btn">Download CV</a>
             </div>
         </div>
@@ -91,11 +92,8 @@ I thrive in spaces where I can learn, break things (responsibly, of course), and
 
 <section id="skills" class="skills-section">
     <div class="container">
-        <!-- Title -->
         <h2 class="skills-title">Skills</h2>
 		<p class="skills-description">Here are some of the technologies I specialize in.</p>
-
-        <!-- Skill Bars -->
         <div class="skills-container">
             <div class="skill">
                 <span>Python</span>
@@ -164,100 +162,104 @@ I thrive in spaces where I can learn, break things (responsibly, of course), and
     </div>
 </section>
 
+<section id="projects">
+    <div class="projects-container">
+        <hr class="line">
+        <p class="subheadingg">Take a look at my latest projects.</p>
+        <h2 class="heading">My <span>Projects.</span></h2>
 
-    <!-- Projects Section with ID -->
-    <section id="projects">
-        <div class="projects-container">
-			<hr class="line">
-            <p class="subheadingg">Take a look at my latest projects.</p>
-            <h2 class="heading">My <span>Projects.</span></h2>
-
-			<div class="projects-grid">
-				<div class="project-box">
-					<h3>Fruit Village</h3>
-					<p class="project-description">A web platform that streamlines the buying and selling of fruits, vegetables, and smoothies. Buyers can browse, order, and track purchases in real time for a seamless shopping experience.</p>
-					<div class="overlay">
-						<button>Show More</button>
-					</div>
-				</div>
-				<div class="project-box">
-					<h3>DevTrack</h3>
-					<p class="project-description">An interactive dashboard designed to help developers track, analyze, and visualize their coding habits and API usage. It provides real-time insights into user activity, making it easier to monitor progress and optimize workflow.
-                    </p>
-					<div class="overlay">
-						<button>Show More</button>
-					</div>
-				</div>
-				<div class="project-box">
-					<h3>Customer Churn <br>Model</h3>
-					<p class="project-description">A machine learning model that analyzes customer behavior to predict churn risk. Helps businesses retain customers by identifying early warning signs and improving retention strategies.</p>
-					<div class="overlay">
-						<button>Show More</button>
-					</div>
-				</div>
-				<div class="project-box">
-					<h3>House Prediction <br>Model</h3>
-					<p class="project-description">A machine learning model that analyzes market trends and property features to predict house prices accurately. Helps buyers, sellers, and investors make data-driven decisions in real estate..</p>
-					<div class="overlay">
-						<button>Show More</button>
-					</div>
-				</div>
-			</div>
+        <div class="projects-carousel">
+            <button class="nav-arrow prev-arrow">&lt;</button>
+            <div class="projects-grid">
+                <div class="project-box">
+                    <h3>Wapi Daktari</h3>
+                    <p class="project-description">A public healthcare crowd-management system designed to help ordinary Kenyans, especially walk-in patients at public hospitals, by predicting the best time to visit a hospital based on past patterns of doctor availability, patient traffic, and waiting times.</p>
+                    <div class="overlay">
+                        <a href="https://github.com/wamaithajoy/Wapi_Daktari" target="_blank">
+                            <button>Show More</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Netflix Price Prediction <br>Model</h3>
+                    <p class="project-description">An interactive dashboard that visualizes Netflix stock price predictions. Built with a hybrid LSTM-XGBoost model, it offers real-time forecasts, historical trend analysis, and key performance indicators to aid investment decisions.</p>
+                    <div class="overlay">
+                        <a href="https://github.com/wamaithajoy/Netflix-Price-Prediction-Model" target="_blank">
+                            <button>Show More</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Dev Track</h3>
+                    <p class="project-description">An interactive dashboard that helps developers track, analyze, and visualize their coding habits and API usage. It offers real-time insights into user activity, enabling better workflow optimization and progress tracking.</p>
+                    <div class="overlay">
+                        <a href="https://github.com/wamaithajoy/DevTrack" target="_blank">
+                            <button>Show More</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Fruit Village</h3>
+                    <p class="project-description">A web platform that streamlines the buying and selling of fruits, vegetables, and smoothies. Buyers can browse, order and track purchases in real-time for a seamless shopping experience.</p>
+                    <div class="overlay">
+                        <a href="https://github.com/wamaithajoy/Fruit-Village" target="_blank">
+                            <button>Show More</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-arrow next-arrow">&gt;</button>
+        </div>
+    </div>
+</section>
+	
+<section id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="heading-line"></div> 
+            <h2 class="contact-heading">Contact <span>Me.</span></h2>
+            <p class="friendly-message">Feel free to get in touch! Let's create something amazing together.</p>
 
         </div>
-    </section>
-	
-	<section id="contact">
-		<div class="contact-container">
-			<!-- Left Section: Contact Details -->
-			<div class="contact-info">
-				<div class="heading-line"></div> <!-- Straight line -->
-				<h2 class="contact-heading">Contact <span>Me.</span></h2>
-				<p class="friendly-message">Feel free to get in touch! Let's create something amazing together.</p>
 
-			</div>
-	
-				<!-- Social Links Section -->
 <div class="social-links">
-	<div class="social-container">
-    <h4>Let's Connect</h4>
-    <div class="social-icons">
-        <a href="https://wa.me/+254741882520" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://twitter.com/" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/joy-wamaitha-524b66233/" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
-    </div>
-    
-    <p class="github-text">
-        Check out my work on 
-        <a href="https://github.com/wamaithajoy" target="_blank" class="github-link">GitHub</a>
-      </p>      
+<div class="social-container">
+<h4>Let's Connect</h4>
+<div class="social-icons">
+    <a href="https://wa.me/+254741882520" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://twitter.com/" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/joy-wamaitha-524b66233/" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+</div>
+
+<p class="github-text">
+    Check out my work on 
+    <a href="https://github.com/wamaithajoy" target="_blank" class="github-link">GitHub</a>
+  </p>      
 </div>
 </div>
 
-			<!-- Right Section: Contact Form -->
-			<div class="contact-form">
-				<h3>Contact Form</h3>
-				<form id="contactForm"  action="http://127.0.0.1:5000/submit_form" method="post">
-					<label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="John" required>
-	
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email" placeholder="Enter your email" required>
-	
-					<label for="message">Message</label>
-					<textarea id="message" name="message" placeholder="Write your message" required></textarea>
-	
-					<button type="submit">Send Message</button>
-				</form>
-                <p id="responseMessage" style="color: white;"></p> <!-- For displaying messages -->
-			</div>
-		</div>
-	
-		<!-- Footer Section -->
-		<div class="footer">
-			<p>Made with ♡ by Joy Wamaitha</p>
-		</div>
-	</section>	
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form id="contactForm"  action="http://127.0.0.1:5000/submit_form" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="responseMessage" style="color: white;"></p> 
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Made with ♡ by Joy Wamaitha</p>
+    </div>
+</section>	
 
 
 	<script src="script.js"></script>

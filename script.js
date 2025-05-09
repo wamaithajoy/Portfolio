@@ -1,5 +1,5 @@
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Stop the form from refreshing the page
+    event.preventDefault(); 
 
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
@@ -23,17 +23,15 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData) // Convert data to JSON format
+        body: JSON.stringify(formData) 
     })
     .then(response => response.json())
     .then(data => {
         responseMessage.innerHTML = "✅ " + data.message;
         responseMessage.style.color = "green";
 
-        // Clear form fields
         document.getElementById("contactForm").reset();
 
-        // Hide message after 2 seconds
         setTimeout(() => {
             responseMessage.textContent = "";
         }, 2000);
@@ -45,12 +43,10 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     });
 });
 
-
-/* Scroll to Section */
 function scrollToSection() {
     window.scrollBy({
         top: window.innerHeight,
-        behavior: "smooth" // Makes scrolling smooth
+        behavior: "smooth" 
     });
 }
 
@@ -59,7 +55,6 @@ if (scrollButton) {
     scrollButton.addEventListener('click', scrollToSection);
 }
 
-/* Active Section Highlighting */
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar ul li a");
 
@@ -81,9 +76,67 @@ function highlightNav() {
     });
 }
 
-// Add event listener for scroll event
 window.addEventListener("scroll", highlightNav);
 
-// Add missing 'name' attributes to your form inputs
 document.querySelector("#name").setAttribute("name", "name");
 document.querySelector("#email").setAttribute("name", "email");
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    const projectBoxes = document.querySelectorAll('.project-box');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+    let currentIndex = 0;
+    const projectsPerPage = 4;
+    const totalPages = Math.ceil(projectBoxes.length / projectsPerPage);
+
+    function updateCarousel() {
+        projectsGrid.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateArrowVisibility();
+    }
+
+    function updateArrowVisibility() {
+        prevArrow.style.opacity = currentIndex === 0 ? '0.3' : '1';
+        prevArrow.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        nextArrow.style.opacity = currentIndex === totalPages - 1 ? '0.3' : '1';
+        nextArrow.style.pointerEvents = currentIndex === totalPages - 1 ? 'none' : 'auto';
+    }
+
+    prevArrow.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    nextArrow.addEventListener('click', () => {
+        if (currentIndex < totalPages - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    updateArrowVisibility();
+
+    projectsGrid.style.width = `${totalPages * 100}%`;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            console.log('Hamburger clicked'); 
+        });
+  
+        document.querySelectorAll('.nav-menu li a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    } else {
+        console.error('Hamburger or nav-menu not found'); 
+    }
+});
