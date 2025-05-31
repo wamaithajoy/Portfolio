@@ -502,15 +502,15 @@ h4 {
 }
 
 .project-description {
-  font-size: 1.2rem;
-  width: 90%;
+  font-size: 1.1rem;
+  width: 80%;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.4;
   position: absolute;
   color: white;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
-  line-clamp: 6;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
 }
 
